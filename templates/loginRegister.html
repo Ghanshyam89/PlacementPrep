@@ -148,7 +148,8 @@
                         </form>
                     </div>
                     <div class="tab-pane fade" id="pills-register" role="tabpanel" aria-labelledby="tab-register">
-                        <form>
+                        {% csrf_token %}
+                        <form method="POST">
                             <div class="text-center mb-3">
                                 <p>Sign up with:</p>
                                 <button type="button" class="btn btn-link btn-floating mx-1">
@@ -170,35 +171,49 @@
 
                             <p class="text-center">or:</p>
 
-                            <!-- Name input -->
-                            <div class="form-outline mb-4">
-                                <input type="text" id="registerName" class="form-control" />
-                                <label class="form-label" for="registerName">Name</label>
-                            </div>
+                            <!-- First Name input -->
+                            <!-- <div class="form-outline mb-4">
+                                <input type="text" id="registerFirstName" class="form-control" />
+                                <label class="form-label" for="registerFirstName">First Name</label>
+                            </div> -->
+
+                            <!-- Last Name input -->
+                            <!-- <div class="form-outline mb-4">
+                                <input type="text" id="registerLastName" class="form-control" />
+                                <label class="form-label" for="registerLastName">Last Name</label>
+                            </div> -->
 
                             <!-- Username input -->
-                            <div class="form-outline mb-4">
+                            <!-- <div class="form-outline mb-4">
                                 <input type="text" id="registerUsername" class="form-control" />
                                 <label class="form-label" for="registerUsername">Username</label>
-                            </div>
+                            </div> -->
 
                             <!-- Email input -->
-                            <div class="form-outline mb-4">
+                            <!-- <div class="form-outline mb-4">
                                 <input type="email" id="registerEmail" class="form-control" />
                                 <label class="form-label" for="registerEmail">Email</label>
-                            </div>
+                            </div> -->
 
                             <!-- Password input -->
-                            <div class="form-outline mb-4">
+                            <!-- <div class="form-outline mb-4">
                                 <input type="password" id="registerPassword" class="form-control" />
                                 <label class="form-label" for="registerPassword">Password</label>
-                            </div>
+                            </div> -->
 
                             <!-- Repeat Password input -->
-                            <div class="form-outline mb-4">
+                            <!-- <div class="form-outline mb-4">
                                 <input type="password" id="registerRepeatPassword" class="form-control" />
                                 <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-                            </div>
+                            </div> -->
+
+                            {% csrf_token %}
+                            {% for field in form %}
+                                <div class="form-outline mb-4">
+                                    {{ field }}
+                                    <label class="form-label" for="{{ field.id }}">{{ field.label }}</label>
+                                </div>
+                            {% endfor %}
 
                             <!-- Checkbox -->
                             <div class="form-check d-flex justify-content-center mb-4">
