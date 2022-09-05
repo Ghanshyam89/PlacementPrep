@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Placement Prep</title>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
+
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+</head>
+
+<body>
+
+  <div class="justify-content-center">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Navbar brand -->
+        <a class="navbar-brand me-2" href="./main">
+          <img src="{% static 'img\logomain.png' %}" height="30" alt="MDB Logo" loading="lazy"
+            style="margin-top: -1px;" />
+        </a>
+
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarButtonsExample"
+          aria-controls="navbarButtonsExample" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarButtonsExample">
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="main">Dashboard</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+
+          <!-- Right linkes -->
+          <div class="d-flex align-items-center">
+            <a href="#"><button type="button" class="btn btn-primary me-3">Logout</button></a>
+            <!-- <a class="" href="#" role="button"><i class="fas fa-user-circle fa-2x"></i></a> -->
+          </div>
+          <!-- Right linkes -->
+
+        </div>
+        <!-- Collapsible wrapper -->
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Quiz Dashboard -->
+    
+    <div class="container" style="margin-top: 20px;">
+      <br>
+      <div class="row clearfix"> <h1>Test Yourself !</h1>
+      </div><br>
+      <!-- <div class="col-md-1 column">
+      </div> -->
+      <div class="col-md-10 column">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              Which one of the following is an application of Stack Data Structure?
+              </h5>
+          </div>
+          <div class="panel-body">
+            <div class="radio">
+              <label>
+                <input type="radio" name="q1" id="optionsRadios1" value="option1"> Managing function calls
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q1" id="optionsRadios2" value="option2"> The stock span problem
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q1" id="optionsRadios3" value="option3"> Arithmetic expression evaluation
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q1" id="optionsRadios4" value="option4"> All of the above
+              </label>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              Which one of the following is an application of Stack Data Structure?
+              </h5>
+          </div>
+          <div class="panel-body">
+            <div class="radio">
+              <label>
+                <input type="radio" name="q2" id="optionsRadios1" value="option1"> Managing function calls
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q2" id="optionsRadios2" value="option2"> The stock span problem
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q2" id="optionsRadios3" value="option3"> Arithmetic expression evaluation
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q2" id="optionsRadios4" value="option4"> All of the above
+              </label>
+            </div>
+          </div>
+
+          <br>
+          
+          <div class="panel-heading">
+            <h5 class="panel-title">
+              Which one of the following is an application of Stack Data Structure?
+              </h5>
+          </div>
+          <div class="panel-body">
+            <div class="radio">
+              <label>
+                <input type="radio" name="q3" id="optionsRadios1" value="option1"> Managing function calls
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q3" id="optionsRadios2" value="option2"> The stock span problem
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q3" id="optionsRadios3" value="option3"> Arithmetic expression evaluation
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="q3" id="optionsRadios4" value="option4"> All of the above
+              </label>
+            </div>
+          </div>
+
+          <br>
+
+          <div class="panel-footer mt-3 mb-5">
+            <a href="#" class="btn btn-primary " role="button">Submit</a>
+            <a href="#" class="btn btn-default disabled" role="button">Reset</a>
+          </div>
+        </div>
+        <!-- <div class="col-md-1 column">
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Quiz Dashboard -->
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="/templates/loginRegister.html">PlacementPrep</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+</body>
+
+</html>
