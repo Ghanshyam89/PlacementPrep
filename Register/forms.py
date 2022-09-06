@@ -44,20 +44,3 @@ class RegistrationForm(forms.Form):
                                 'type': 'password',
                                 'id':'registerRepeatPassword'
                             }))
-        
-    
-class LoginForm(forms.Form):
-    first_name = forms.CharField(label='Username',
-                                max_length=100,
-                                widget=forms.TextInput(attrs={
-                                    'class':'form-control',
-                                    'type': 'text',
-                                    'id':'loginName'
-                                }))
-    last_name = forms.CharField(label='Password',
-                            max_length=100,
-                            widget=forms.TextInput(attrs={
-                                'class':'form-control',
-                                'type': 'password',
-                                'id':'loginPassword'
-                            }))
