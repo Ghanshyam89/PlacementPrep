@@ -87,6 +87,8 @@
                 <!-- Pills content -->
                 <div class="tab-content">
                     <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+                        
+                        {% csrf_token %}
                         <form>
                             <div class="text-center mb-3">
                                 <p>Sign in with:</p>
@@ -117,10 +119,18 @@
 
                             <!-- Password input -->
                             <div class="form-outline mb-4">
-                                <input type="password" id="login 
-                                Password" class="form-control" />
+                                <input type="password" id="loginPassword" class="form-control" />
                                 <label class="form-label" for="loginPassword">Password</label>
                             </div>
+
+                            {% csrf_token %}
+                            <!-- {% for field in form %}
+                                <div class="form-outline mb-4">
+                                    {{ field }}
+                                    <label class="form-label" for="{{ field.id }}">{{ field.label }}</label>
+                                </div>
+                            {% endfor %} -->
+
 
                             <!-- 2 column grid layout -->
                             <div class="row mb-4">
