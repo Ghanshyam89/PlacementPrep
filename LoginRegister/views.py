@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from .forms import RegistrationForm
 # Create your views here.
 
-def loginRegister(request):
+def register(request):
     if request.method == "POST":
         form = RegistrationForm(request.POST)
         if form.is_valid():
@@ -20,3 +20,8 @@ def loginRegister(request):
     else:
         form = RegistrationForm()
     return render(request, 'loginRegister.html', {'form':form})
+
+def login(request):
+    
+
+    return render(request, 'loginRegister.html', {'form': form})
