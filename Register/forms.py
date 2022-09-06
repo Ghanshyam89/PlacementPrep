@@ -10,37 +10,37 @@ class RegistrationForm(forms.Form):
                                     'id':'registerFirstName'
                                 }))
     last_name = forms.CharField(label='Last name',
-                            max_length=100,
-                            widget=forms.TextInput(attrs={
-                                'class':'form-control',
-                                'type': 'text',
-                                'id':'registerLastName'
-                            }))
+                                max_length=100,
+                                widget=forms.TextInput(attrs={
+                                    'class':'form-control',
+                                    'type': 'text',
+                                    'id':'registerLastName'
+                                }))
     username = forms.CharField(label='Username',
-                            max_length=100,
-                            widget=forms.TextInput(attrs={
-                                'class':'form-control',
-                                'type': 'text',
-                                'id':'registerUsername'
-                            }))
+                                max_length=100,
+                                widget=forms.TextInput(attrs={
+                                    'class':'form-control',
+                                    'type': 'text',
+                                    'id':'registerUsername'
+                                }))
     email = forms.CharField(label='Email',
-                            max_length=100,
-                            widget=forms.TextInput(attrs={
-                                'class':'form-control',
-                                'type': 'email',
-                                'id':'registerEmail'
-                            }))
+                                max_length=100,
+                                widget=forms.TextInput(attrs={
+                                    'class':'form-control',
+                                    'type': 'email',
+                                    'id':'registerEmail'
+                                }))
     password = forms.CharField(label='Password',
-                            max_length=100,
-                            widget=forms.TextInput(attrs={
-                                'class':'form-control',
-                                'type': 'password',
-                                'id':'registerPassword'
-                            }))
+                                max_length=100,
+                                widget=forms.TextInput(attrs={
+                                    'class':'form-control',
+                                    'type': 'password',
+                                    'id':'registerPassword'
+                                }))
     repeat_password =  forms.CharField(label='Repeat Password',
-                            max_length=100,
-                            widget=forms.TextInput(attrs={
-                                'class':'form-control',
-                                'type': 'password',
-                                'id':'registerRepeatPassword'
-                            }))
+                                max_length=100,
+                                widget=forms.TextInput(attrs={
+                                    'class':'form-control',
+                                    'type': 'password',
+                                    'id':'registerRepeatPassword'
+                                }))

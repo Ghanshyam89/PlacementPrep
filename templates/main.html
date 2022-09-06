@@ -52,7 +52,7 @@
 
           <!-- Right linkes -->
           <div class="d-flex align-items-center">
-            <a href="#"><button type="button" class="btn btn-primary me-3">Logout</button></a>
+            <a href="/logout"><button type="button" class="btn btn-primary me-3">Logout</button></a>
             <!-- <a class="" href="#" role="button"><i class="fas fa-user-circle fa-2x"></i></a> -->
           </div>
           <!-- Right linkes -->
@@ -68,7 +68,11 @@
     <div class="container mt-6">
 
       <div class="mt-5">
-        <h4>Hey Folk :)</h4>
+        {% if user.is_authenticated %}
+          <h4>Hello {{ user.get_username }} :)</h4>
+        {% else %}
+          <p>Welcome, new user. Please log in.</p>
+        {% endif %}
       </div>
       <div>
         

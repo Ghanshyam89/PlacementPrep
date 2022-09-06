@@ -10,9 +10,9 @@ class LoginForm(forms.Form):
                                     'id':'loginName'
                                 }))
     password = forms.CharField(label='Password',
-                            max_length=100,
-                            widget=forms.TextInput(attrs={
-                                'class':'form-control',
-                                'type': 'password',
-                                'id':'loginPassword'
-                            }))
+                                max_length=100,
+                                widget=forms.TextInput(attrs={
+                                    'class':'form-control',
+                                    'type': 'password',
+                                    'id':'loginPassword'
+                                }))
