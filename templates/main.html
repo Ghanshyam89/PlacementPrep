@@ -69,7 +69,7 @@
 
       <div class="mt-5">
         {% if user.is_authenticated %}
-          <h4>Hello {{ user.get_username }} :)</h4>
+          <h4 class="text-uppercase">Hello {{ user.get_username }} :)</h4>
         {% else %}
           <p>Welcome, new user. Please log in.</p>
         {% endif %}
