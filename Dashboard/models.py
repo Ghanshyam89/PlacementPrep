@@ -23,5 +23,6 @@ class Questions(models.Model):
 class Student(models.Model):
     user = models.ForeignKey(User, blank = True, null = True, on_delete = models.CASCADE)
     que_ids = models.ManyToManyField(Questions, blank = True) 
+    
     def __str__(self):
         return self.user.first_name+' '+self.user.last_name
