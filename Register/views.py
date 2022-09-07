@@ -16,12 +16,7 @@ def register(request):
             user.email = form.cleaned_data['email']
             user.password = form.cleaned_data['password']
             user.save()
-            return HttpResponseRedirect('/', "user created")
+            return HttpResponseRedirect('/login', "user created")
     else:
         form = RegistrationForm()
-    return render(request, 'loginRegister.html', {'form':form})
-
-def login(request):
-    
-
-    return render(request, 'loginRegister.html', {'form': form})
+    return render(request, 'register.html', {'form':form})
