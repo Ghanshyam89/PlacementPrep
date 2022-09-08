@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     'Register',
     'Dashboard',
+    'django_extensions',
     # 'Quiz',
     # 'Login',
 ]
