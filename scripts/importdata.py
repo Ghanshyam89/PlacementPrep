@@ -1,4 +1,5 @@
 from Dashboard.models import Questions, Domain 
+# from Dashboard.models import Questions, Domain 
 import csv
 
 def run():
@@ -10,15 +11,19 @@ def run():
         Domain.objects.all().delete()
 
         for row in reader:
-            print(row)
+            # print(row)
 
             domain, _ = Domain.objects.get_or_create(domain_name=row[4])
+            domain.save()
+            # print(domain)
 
             questions = Questions(que_id=row[0],
                                 que_title=row[2],
                                 que_link=row[3],
-                                que_domain=domain,
+                                # que_domain=domain,
                                 que_difficulty=row[5],
                                 dsa_sheet=row[6])
 
+            # questions.que_domain.set(domain)
             questions.save()
+            questions.que_domain.add(domain)
