@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    'LoginRegister',
+    "crispy_forms",
+    'Register',
+    'Dashboard',
+    'django_extensions',
+    # 'Quiz',
+    # 'Login',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +128,12 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+LOGOUT_REDIRECT_URL = "/login"
+
+LOGIN_REDIRECT_URL = "/main"
+
+CRISPY_TEMPLATE_PACK='bootstrap4'
+
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = BASE_DIR / "sent_emails"

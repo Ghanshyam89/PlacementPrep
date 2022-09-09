@@ -29,7 +29,7 @@
       <!-- Container wrapper -->
       <div class="container">
         <!-- Navbar brand -->
-        <a class="navbar-brand me-2" href="./main">
+        <a class="navbar-brand me-2" href="/main">
           <img src="{% static 'img\logomain.png' %}" height="30" alt="MDB Logo" loading="lazy"
             style="margin-top: -1px;" />
         </a>
@@ -45,14 +45,22 @@
           <!-- Left links -->
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="main">Dashboard</a>
+              <a class="nav-link" href="/main">Dashboard</a>
             </li>
           </ul>
           <!-- Left links -->
 
           <!-- Right linkes -->
           <div class="d-flex align-items-center">
-            <a href="#"><button type="button" class="btn btn-primary me-3">Logout</button></a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <h6 class="text-uppercase me-3 mt-2">{{ user.get_username }}</h6>
+              </li>
+              <li>
+                <a href="/logout"><button type="button" class="btn btn-primary me-3">Logout</button></a>
+              </li>
+            </ul>
+            
             <!-- <a class="" href="#" role="button"><i class="fas fa-user-circle fa-2x"></i></a> -->
           </div>
           <!-- Right linkes -->
@@ -68,7 +76,11 @@
     <div class="container mt-6">
 
       <div class="mt-5">
-        <h4>Hey Folk :)</h4>
+        {% if user.is_authenticated %}
+          <h4 class="text-uppercase">Hello {{ user.get_username }} :)</h4>
+        {% else %}
+          <p>Welcome, new user. Please log in.</p>
+        {% endif %}
       </div>
       <div>
         
@@ -126,7 +138,7 @@
           <!-- solved Dropdown -->
 
           <!-- Attempt a Quiz -->
-          <a class="btn btn-primary m-1" href="quiz" role="button">
+          <a class="btn btn-primary m-1" href="/quiz" role="button">
             Attempt a Quiz
           </a>
 
@@ -258,7 +270,7 @@
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
         © 2022 Copyright:
-        <a class="text-white" href="/templates/loginRegister.html">PlacementPrep</a>
+        <a class="text-white" href="/main">PlacementPrep</a>
       </div>
       <!-- Copyright -->
     </footer>
