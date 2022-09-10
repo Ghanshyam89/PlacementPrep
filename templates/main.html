@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -172,92 +173,24 @@
                   <th scope="col">Difficulty</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <th scope="row">
-                    <div class="text-center" class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    </div>
-                  </th>
-                  <td colspan="6">987. Vertical Order Traversal of a Binary Tree</td>
-                  <td><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a></td>
-                  <td>Elit</td>
-                  <td>Hard</td>
-                </tr>
 
+              <tbody>
+                
+                {% for question in que_list %}
                 <tr>
-                  <td>2</td>
-                  <th scope="row">
-                    <div class="text-center" class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    </div>
-                  </th>
-                  <td colspan="6">987. Vertical Order Traversal of a Binary Tree</td>
-                  <td><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a></td>
-                  <td>Amet</td>
-                  <td>Hard</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <th scope="row">
-                    <div class="text-center" class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    </div>
-                  </th>
-                  <td colspan="6">987. Vertical Order Traversal of a Binary Tree</td>
-                  <td><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a></td>
-                  <td>Elit</td>
-                  <td>Hard</td>
-                </tr>
-                <tr>
-                  <td>4</td>
+                  <td>{{question.get_que_id}}</td>
                   <th scope="row">
                     <div class="text-center" class="form-check text-center">
                       <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                     </div>
                   </th>
-                  <td colspan="6">987. Vertical Order Traversal of a Binary Tree</td>
-                  <td><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a></td>
-                  <td>Fugiat</td>
-                  <td>Hard</td>
+                  <td colspan="6">{{question}}</td>
+                  <td><a href="{{question.get_que_link}}" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a></td>
+                  <td>{{question.get_que_domain}}</td>
+                  <td>{{question.get_que_difficulty}}</td>
                 </tr>
-                <tr>
-                  <td>5</td>
-                  <th scope="row">
-                    <div class="text-center" class="form-check text-center">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    </div>
-                  </th>
-                  <td colspan="6">987. Vertical Order Traversal of a Binary Tree</td>
-                  <td><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a></td>
-                  <td>Fugiat</td>
-                  <td>Hard</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <th scope="row">
-                    <div class="text-center" class="form-check text-center">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    </div>
-                  </th>
-                  <td colspan="6">987. Vertical Order Traversal of a Binary Tree</td>
-                  <td><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a></td>
-                  <td>Fugiat</td>
-                  <td>Hard</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <th scope="row">
-                    <div class="text-center" class="form-check text-center">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                    </div>
-                  </th>
-                  <td colspan="6">987. Vertical Order Traversal of a Binary Tree</td>
-                  <td><a href="http://" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a></td>
-                  <td>Fugiat</td>
-                  <td>Hard</td>
-                </tr>
+                {% endfor %}
+                
               </tbody>
             </table>
         </div>

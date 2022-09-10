@@ -7,6 +7,9 @@ class Domain(models.Model):
 
     def __str__(self):
         return self.domain_name
+
+    def get_domain(self):
+        return self.domain_name
     
 class Questions(models.Model):
     que_id = models.CharField('Question Id', max_length=5)
@@ -18,7 +21,18 @@ class Questions(models.Model):
 
     def __str__(self):
         return self.que_title
+    
+    def get_que_id(self):
+        return self.que_id
 
+    def get_que_link(self):
+        return self.que_link
+
+    def get_que_domain(self):
+        return self.que_domain
+
+    def get_que_difficulty(self):
+        return self.que_difficulty
 
 class Student(models.Model):
     first_name = models.CharField('First Name', max_length=15, blank = True)
