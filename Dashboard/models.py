@@ -39,7 +39,7 @@ class Student(models.Model):
     last_name = models.CharField('Last Name', max_length=15, blank = True)
     username = models.CharField('Username', max_length=30, blank = True)
     email = models.EmailField('User Email', blank = True)
-    que_ids = models.ManyToManyField(Questions, blank = True) 
+    que_ids = models.ManyToManyField(Questions, blank = True)
     
     def __str__(self):
         return self.first_name+' '+self.last_name
