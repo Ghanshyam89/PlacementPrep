@@ -29,7 +29,7 @@ class Questions(models.Model):
         return self.que_link
 
     def get_que_domain(self):
-        return self.que_domain
+        return self.que_domain.all()
 
     def get_que_difficulty(self):
         return self.que_difficulty

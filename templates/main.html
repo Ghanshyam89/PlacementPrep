@@ -186,7 +186,11 @@
                   </th>
                   <td colspan="6">{{question}}</td>
                   <td><a href="{{question.get_que_link}}" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a></td>
-                  <td>{{question.get_que_domain}}</td>
+                  <td>
+                    {% for domain in question.get_que_domain %}
+                      {{ domain }}
+                    {% endfor %}
+                  </td>
                   <td>{{question.get_que_difficulty}}</td>
                 </tr>
                 {% endfor %}
