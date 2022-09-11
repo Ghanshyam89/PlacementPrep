@@ -22,5 +22,4 @@ urlpatterns = [
     path('register/', include('Register.urls')),
     path('main/', include('Dashboard.urls')),
     path('quiz/', include('Quiz.urls')),
-    path('adminpage/', include('AdminApp.urls')),
 ]
