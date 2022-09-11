@@ -27,16 +27,31 @@
         <!-- Left links -->
 
         <!-- Right linkes -->
-        <div class="d-flex align-items-center">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <h6 class="text-uppercase me-3 mt-2">{{ user.get_full_name }}</h6>
-            </li>
-            <li>
-              <a href="/logout"><button type="button" class="btn btn-primary me-3">Logout</button></a>
-            </li>
-          </ul>
-        </div>
+
+        {% if user.is_authenticated %}
+          <div class="d-flex align-items-center">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <h6 class="text-uppercase me-3 mt-2">{{ user.get_full_name }}</h6>
+              </li>
+              <li>
+                <a href="/logout"><button type="button" class="btn btn-primary me-3">Logout</button></a>
+              </li>
+            </ul>
+          </div>
+
+        {% else %}
+          <div class="d-flex align-items-center">
+            <a href="/login"><button type="button" class="btn btn-link px-3 me-2">
+                Login
+            </button></a>
+            <a href="/register"><button type="button" class="btn btn-primary me-3">
+                Sign up for free
+            </button></a>
+            <!-- <a class="btn btn-dark px-3" href="#" role="button"><i
+                    class="fab fa-github"></i></a> -->
+          </div>
+        {% endif %}
         <!-- Right linkes -->
 
       </div>
