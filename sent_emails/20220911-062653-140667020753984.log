@@ -4,17 +4,17 @@ Content-Transfer-Encoding: 8bit
 Subject: Password reset on 127.0.0.1:8000
 From: webmaster@localhost
 To: ghanshyampraja8959@gmail.com
-Date: Sat, 10 Sep 2022 13:18:15 -0000
-Message-ID: <166281589504.33318.4598671500070875246@pop-os.localdomain>
+Date: Sun, 11 Sep 2022 06:26:53 -0000
+Message-ID: <166287761347.6680.12121864500307888363@pop-os.localdomain>
 
 
 You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
 
 Please go to the following page and choose a new password:
 
-http://127.0.0.1:8000/reset/MTI/bbjeaf-7dbcd4ba7feda8e3f1b1de1c9bfd2c48/
+http://127.0.0.1:8000/reset/MTE/bbkpwt-bc21e0e636d70baf7986cfec7976f32b/
 
-Your username, in case you’ve forgotten: ghanshyam5463
+Your username, in case you’ve forgotten: ghanshyam1
 
 Thanks for using our site!
 
