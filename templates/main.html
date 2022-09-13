@@ -21,7 +21,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
 
   <script>
-    function myFunction(input) {
+    function myFunction(input, pos) {
       // Declare variables
       var filter, table, tr, td, i, txtValue;
       // input = document.getElementById("myInput");
@@ -31,7 +31,7 @@
     
       // Loop through all table rows, and hide those who don't match the search query
       for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[4];
+        td = tr[i].getElementsByTagName("td")[pos];
         if (td) {
           txtValue = td.textContent || td.innerText;
           if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -74,10 +74,10 @@
           </a>
 
           <ul class="dropdown-menu" aria-labelledby="dropdowndsa">
-            <li><a class="dropdown-item" href="#">Love Babbar DSA Sheet</a></li>
-            <li><a class="dropdown-item" href="#">Striver DSA Sheet</a></li>
-            <li><a class="dropdown-item" href="#">Fraz DSA Sheet</a></li>
-            <li><a class="dropdown-item" href="#">Apna College DSA Sheet</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('L', 0)">Love Babbar DSA Sheet</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('S', 0)">Striver DSA Sheet</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('F', 0)">Fraz DSA Sheet</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('A', 0)">Apna College DSA Sheet</a></li>
           </ul>
           <!-- Select DSA Sheet Dropdown -->
 
@@ -88,9 +88,9 @@
           </a>
 
           <ul class="dropdown-menu" aria-labelledby="dropdowndifficulty">
-            <li><a class="dropdown-item" href="#" onClick="myFunction('Easy')">Easy</a></li>
-            <li><a class="dropdown-item" href="#" onClick="myFunction('Medium')">Medium</a></li>
-            <li><a class="dropdown-item" href="#" onClick="myFunction('Hard')">Hard</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('Easy', 4)">Easy</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('Medium', 4)">Medium</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('Hard', 4)">Hard</a></li>
           </ul>
           <!-- Difficulty Dropdown -->
 
@@ -102,8 +102,9 @@
 
           <ul class="dropdown-menu" aria-labelledby="dropdowndomain">
             {% for domain in domains %}
-            <li><a class="dropdown-item" href="#" onClick="myFunction('Array')">{{ domain }}</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('Array', 3)">{{ domain }}</a></li>
             {% endfor %}
+            <li><a class="dropdown-item" href="#" onClick="myFunction('String', 3)">String</a></li>
           </ul>
           <!-- Domain Dropdown -->
 
@@ -114,8 +115,8 @@
           </a>
 
           <ul class="dropdown-menu" aria-labelledby="dropdownsolved">
-            <li><a class="dropdown-item" href="#" onClick="myFunction('Solved')">Solved</a></li>
-            <li><a class="dropdown-item" href="#" onClick="myFunction('Unsolved')">Unsolved</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('Solved', 1)">Solved</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('Unsolved', 1)">Unsolved</a></li>
           </ul>
           <!-- solved Dropdown -->
 
