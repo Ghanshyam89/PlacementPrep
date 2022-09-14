@@ -102,9 +102,8 @@
 
           <ul class="dropdown-menu" aria-labelledby="dropdowndomain">
             {% for domain in domains %}
-            <li><a class="dropdown-item" href="#" onClick="myFunction('Array', 3)">{{ domain }}</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('{{ domain }}', 3)">{{ domain }}</a></li>
             {% endfor %}
-            <li><a class="dropdown-item" href="#" onClick="myFunction('String', 3)">String</a></li>
           </ul>
           <!-- Domain Dropdown -->
 
@@ -115,8 +114,8 @@
           </a>
 
           <ul class="dropdown-menu" aria-labelledby="dropdownsolved">
-            <li><a class="dropdown-item" href="#" onClick="myFunction('Solved', 1)">Solved</a></li>
-            <li><a class="dropdown-item" href="#" onClick="myFunction('Unsolved', 1)">Unsolved</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('Yes', 1)">Solved</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('No', 1)">Unsolved</a></li>
           </ul>
           <!-- solved Dropdown -->
 
@@ -167,8 +166,12 @@
                 <tr>
                   <td>{{question.get_que_id}}</td>
                   <th scope="row">
-                    <div class="text-center" class="form-check text-center">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <!-- <div class="text-center" class="form-check text-center">
+                      <input class="form-check-input" type="checkbox" value="Ye
+                      +s" id="flexCheckDefault" />
+                    </div> -->
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="L1" unchecked />
                     </div>
                   </th>
                   <td colspan="6" class="text-truncate" style="max-width: 300px;">{{question}}</td>
