@@ -161,7 +161,6 @@
               <!-- </thead> -->
 
               <!-- <tbody> -->
-                
                 {% for question in que_list %}
                 <tr>
                   <td>{{question.get_que_id}}</td>
@@ -171,7 +170,20 @@
                       +s" id="flexCheckDefault" />
                     </div> -->
                     <div class="form-check form-switch">
-                      <input class="form-check-input" type="checkbox" role="switch" id="L1" unchecked />
+                      
+                      <input class="form-check-input" type="checkbox" role="switch" 
+                      {% for student in students %}
+                        {% if student.username == user.get_username %}
+                          {% for que in student.get_que_id %}
+                            {% if question.get_que_id == que.get_que_id %}
+                              checked
+                            {% else %}
+                              unchecked
+                            {% endif %}
+                          {% endfor %}
+                        {% endif %}
+                      {% endfor %}
+                      />
                     </div>
                   </th>
                   <td colspan="6" class="text-truncate" style="max-width: 300px;">{{question}}</td>
@@ -192,11 +204,10 @@
 
     </div>
 
-    
+  
+
     <!-- Including Footer -->
     {% include "footer.html" %}
-
-    
 
 </body>
 
