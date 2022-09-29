@@ -103,6 +103,8 @@
           <ul class="dropdown-menu" aria-labelledby="dropdowndomain">
             {% for domain in domains %}
             <li><a class="dropdown-item" href="#" onClick="myFunction('{{ domain }}', 3)">{{ domain }}</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('String', 3)">String</a></li>
+            
             {% endfor %}
           </ul>
           <!-- Domain Dropdown -->
@@ -114,8 +116,8 @@
           </a>
 
           <ul class="dropdown-menu" aria-labelledby="dropdownsolved">
-            <li><a class="dropdown-item" href="#" onClick="myFunction('Yes', 1)">Solved</a></li>
-            <li><a class="dropdown-item" href="#" onClick="myFunction('No', 1)">Unsolved</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('', 1)">Solved</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction(None, 1)">Unsolved</a></li>
           </ul>
           <!-- solved Dropdown -->
 
@@ -131,7 +133,7 @@
           <!-- Attempt a Quiz -->
 <!--  Search bar
   
-          <div class="input-group ps-5">
+          <div class=" input-group ps-5">
             <div id="navbar-search-autocomplete" class="form-outline">
               <input type="search" id="form1" class="form-control" />
               <label class="form-label" for="form1">Search</label>
@@ -157,6 +159,7 @@
                   <th scope="col">Link</th>
                   <th scope="col" style="width: 200px;">Domain</th>
                   <th scope="col">Difficulty</th>
+                  <th scope="col">Reminder</th>
                 </tr>
               <!-- </thead> -->
 
@@ -194,6 +197,11 @@
                     {% endfor %}
                   </td>
                   <td>{{question.get_que_difficulty}}</td>
+                  <td>
+                    <a class="" href="#" role="button">
+                      Remind
+                    </a>
+                  </td>
                 </tr>
                 {% endfor %}
                 
