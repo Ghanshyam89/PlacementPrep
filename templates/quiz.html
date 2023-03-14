@@ -36,102 +36,52 @@
       <!-- <div class="col-md-1 column">
       </div> -->
       <div class="col-md-10 column">
+        {% csrf_token %}
+        <form method="POST">
         <div class="panel panel-primary">
+          {% for que in questions %}
+
           <div class="panel-heading">
             <h5 class="panel-title">
-              1. Which one of the following is an application of Stack Data Structure?
+              {{ forloop.counter }}. {{ que.question_statement }}
               </h5>
           </div>
           <div class="panel-body">
             <div class="radio">
               <label>
-                <input type="radio" name="q1" id="optionsRadios1" value="option1"> Managing function calls
+                <input type="radio" name="{{que.id}}" id="optionsRadios1" value="a"> {{ que.optionA }}
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="q1" id="optionsRadios2" value="option2"> The stock span problem
+                <input type="radio" name="{{que.id}}" id="optionsRadios2" value="b"> {{ que.optionB }}
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="q1" id="optionsRadios3" value="option3"> Arithmetic expression evaluation
+                <input type="radio" name="{{que.id}}" id="optionsRadios3" value="c"> {{ que.optionC }}
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="q1" id="optionsRadios4" value="option4"> All of the above
+                <input type="radio" name="{{que.id}}" id="optionsRadios4" value="d"> {{ que.optionD }}
               </label>
             </div>
           </div>
-
           <br>
           <hr><br>
-          <div class="panel-heading">
-            <h5 class="panel-title">
-              2. Which one of the following is an application of Stack Data Structure?
-              </h5>
-          </div>
-          <div class="panel-body">
-            <div class="radio">
-              <label>
-                <input type="radio" name="q2" id="optionsRadios1" value="option1"> Managing function calls
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="q2" id="optionsRadios2" value="option2"> The stock span problem
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="q2" id="optionsRadios3" value="option3"> Arithmetic expression evaluation
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="q2" id="optionsRadios4" value="option4"> All of the above
-              </label>
-            </div>
-          </div>
+          {% endfor %}
 
-          <br>
-          <hr><br>
-          <div class="panel-heading">
-            <h5 class="panel-title">
-              3. Which one of the following is an application of Stack Data Structure?
-              </h5>
-          </div>
-          <div class="panel-body">
-            <div class="radio">
-              <label>
-                <input type="radio" name="q3" id="optionsRadios1" value="option1"> Managing function calls
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="q3" id="optionsRadios2" value="option2"> The stock span problem
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="q3" id="optionsRadios3" value="option3"> Arithmetic expression evaluation
-              </label>
-            </div>
-            <div class="radio">
-              <label>
-                <input type="radio" name="q3" id="optionsRadios4" value="option4"> All of the above
-              </label>
-            </div>
-          </div>
-
+          
+          
           <br>
           
           <div class="panel-footer mt-3 mb-5">
-            <a href="#" class="btn btn-primary " role="button">Submit</a>
+            <button type="submit" class="btn btn-primary ">Submit</button>
             <a href="#" class="btn btn-default" role="button">Reset</a>
           </div>
         </div>
+      </form>
         <!-- <div class="col-md-1 column">
         </div> -->
       </div>
