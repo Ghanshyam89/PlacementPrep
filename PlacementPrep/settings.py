@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'django_extensions',
     # 'Quiz',
     # 'Login',
+    'Videos',
+    'Contests',
 ]
 
 MIDDLEWARE = [

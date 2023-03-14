@@ -23,4 +23,6 @@ urlpatterns = [
     path('register/', include('Register.urls')),
     path('main/', include('Dashboard.urls')),
     path('quiz/', include('Quiz.urls')),
+    path('videos/', include('Videos.urls')),
+    path('contests/', include('Contests.urls')),
 ]
