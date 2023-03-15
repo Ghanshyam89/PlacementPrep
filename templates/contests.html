@@ -8,7 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - Placement Prep</title>
+  <title>Contests - Placement Prep</title>
 
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
@@ -89,7 +89,7 @@
 
           <ul class="dropdown-menu" aria-labelledby="dropdowndifficulty">
             <li><a class="dropdown-item" href="#" onClick="myFunction('Ongoing Contest', 3)">Ongoing Contest</a></li>
-            <li><a class="dropdown-item" href="#" onClick="myFunction('Present Contest', 3)">Upcoming Contest</a></li>
+            <li><a class="dropdown-item" href="#" onClick="myFunction('Upcoming Contest', 3)">Upcoming Contest</a></li>
             <!-- <li><a class="dropdown-item" href="#" onClick="myFunction('Hard', 4)">Hard</a></li> -->
           </ul>
           <!-- Difficulty Dropdown -->
@@ -119,7 +119,7 @@
                   <td>{{contest.StartTime}}</td>
                   <td colspan="6" class="text-truncate" style="max-width: 300px;">{{contest.Name}}</td>
                   <td><a href="{{contest.url}}" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a></td>
-                  <td>Ongoing Contest</td>
+                  <td>Upcoming Contest</td>
                   <td>{{contest.Platform}}</td>
                   <td>
                     <a class="" href="https://calendar.google.com/calendar/u/0/r/eventedit?text=%5BPlacementPrep%5D{{contest.Name}}&details=%5BPlacementPrep%5D{{contest.Name}}+{{contest.url}}&dates=&location={{contest.url}}&trp=false" role="button" target="_blank"> 
@@ -131,7 +131,7 @@
                 
                 {% for contest in present_contests %}
                 <tr>
-                  <td>{{contest.StartTime}}</td>
+                  <td>{{contest.StartTime}} --</td>
                   <td colspan="6" class="text-truncate" style="max-width: 300px;">{{contest.Name}}</td>
                   <td><a href="{{contest.url}}" target="_blank" rel="noopener noreferrer"><i class="fas fa-link"></i></a></td>
                   <td>Ongoing Contest</td>

@@ -6,3 +6,4 @@ plotly==5.13.1
 beautifulsoup4==4.11.2
 requests==2.28.2
 whitenoise==6.4.0
+crispy_bootstrap4
