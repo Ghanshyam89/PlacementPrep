@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'Login',
     'Videos',
     'Contests',
+    'Career',
 ]
 
 MIDDLEWARE = [
