@@ -18,6 +18,20 @@
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+
+    <style>
+
+        .errorlist{
+            text-align: center;
+            max-width: 500px;
+            list-style: none;
+            color: red;
+            padding-left: -20px;
+            font-weight: 800;
+            word-wrap: break-word;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -42,63 +56,17 @@
                         <form method="POST">
                             <div class="text-center mb-3">
                                 <p>Sign up here:</p>
-                                <!-- <p>Sign up with:</p> -->
-                                <!-- <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-facebook-f"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-google"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-twitter"></i>
-                                </button>
-
-                                <button type="button" class="btn btn-link btn-floating mx-1">
-                                    <i class="fab fa-github"></i>
-                                </button> -->
                             </div>
 
-                            <!-- <p class="text-center">or:</p> -->
-
-                            <!-- First Name input -->
-                            <!-- <div class="form-outline mb-4">
-                                <input type="text" id="registerFirstName" class="form-control" />
-                                <label class="form-label" for="registerFirstName">First Name</label>
-                            </div> -->
-
-                            <!-- Last Name input -->
-                            <!-- <div class="form-outline mb-4">
-                                <input type="text" id="registerLastName" class="form-control" />
-                                <label class="form-label" for="registerLastName">Last Name</label>
-                            </div> -->
-
-                            <!-- Username input -->
-                            <!-- <div class="form-outline mb-4">
-                                <input type="text" id="registerUsername" class="form-control" />
-                                <label class="form-label" for="registerUsername">Username</label>
-                            </div> -->
-
-                            <!-- Email input -->
-                            <!-- <div class="form-outline mb-4">
-                                <input type="email" id="registerEmail" class="form-control" />
-                                <label class="form-label" for="registerEmail">Email</label>
-                            </div> -->
-
-                            <!-- Password input -->
-                            <!-- <div class="form-outline mb-4">
-                                <input type="password" id="registerPassword" class="form-control" />
-                                <label class="form-label" for="registerPassword">Password</label>
-                            </div> -->
-
-                            <!-- Repeat Password input -->
-                            <!-- <div class="form-outline mb-4">
-                                <input type="password" id="registerRepeatPassword" class="form-control" />
-                                <label class="form-label" for="registerRepeatPassword">Repeat password</label>
-                            </div> -->
-
                             {% csrf_token %}
+
+                            {%for field, errors in form.errors.items%}
+                            <div class="info">
+                                <div id="error">{{errors | escape}}</div>
+                            </div>  
+                                
+                            {% endfor%}
+
                             {% for field in form %}
                                 <div class="form-outline mb-4">
                                     {{ field }}
@@ -117,6 +85,10 @@
 
                             <!-- Submit button -->
                             <button type="submit" class="btn btn-primary btn-block mb-3">Sign up</button>
+
+                            <!-- {% for i in form.errors %}
+                                {{i.message}}
+                            {% endfor %} -->
                         </form>
                 </div>
                 <!-- Pills content -->
